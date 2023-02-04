@@ -4,3 +4,8 @@ normal_user:
   name: John Doe
   email: jdoe@example.com
   password_digest: <%= User.digest('password') %>
+
+another_user:
+  name: Mary Jane
+  email: mj@example.com
+  password_digest: <%= User.digest('password') %>

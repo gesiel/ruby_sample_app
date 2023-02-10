@@ -5,7 +5,20 @@ normal_user:
   email: jdoe@example.com
   password_digest: <%= User.digest('password') %>
 
+admin_user:
+  name: Admin
+  email: admin@example.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+
 another_user:
   name: Mary Jane
   email: mj@example.com
   password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

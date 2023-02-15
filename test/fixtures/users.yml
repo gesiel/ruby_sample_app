@@ -29,6 +29,13 @@ inactive:
   admin: false
   activated: false
 
+no_microposts_user:
+  name: No Microposts User
+  email: nomicroposts@example.com
+  password_digest: <%= User.digest('password') %>
+  admin: false
+  activated: true
+
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>
